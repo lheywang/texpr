@@ -19,9 +19,40 @@ class Config:
         If non existing, creating it.
         """
 
-        with open(filename, "r") as f:
-            self.config = yaml.safe_load(f)
+        # Load the config, or creating a new one...
+        try:
+            with open(filename, "r") as f:
+                self.config = yaml.safe_load(f)
+                self.logger.info(
+                    f"Found {len(self.config["documents"])} documents : {[t["type"] for t in self.config["documents"]]}"
+                )
+        except FileNotFoundError:
+            self.config = {}
+            self.logger.info(f"No config file where found. Creating an empty one.")
+        except Exception as e:
+            self.logger.error(
+                f"Unresolved error occured while parsing the yaml config : {e}"
+            )
+        self.config_file = filename
 
+        # Copy the logger reference locally
         self.logger = logger
 
-        self.logger.info(f"{self.config["documents"][0]}")
+        return
+
+    def add_template(self) -> None:
+        pass
+
+    def add_settings(self) -> None:
+        pass
+
+    def add_chapter(self) -> None:
+        pass
+
+    def add_lang(self) -> None:
+        pass
+
+    # TODO:
+    # - Validate config file, if loaded.
+    # - Create project structure (pathlib)
+    #

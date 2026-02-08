@@ -9,6 +9,9 @@ documents:
         file: "templates/sections/experience.tex"
       - title: "Education"
         file: "templates/sections/education.tex"
+    lang:
+      - FR
+      - EN
 
   # Another document : 
   - type: Letter
@@ -16,3 +19,7 @@ documents:
     recipient: "Hiring Manager"
     sections:
       - file: "templates/sections/letter_body.tex"
+    lang:
+      - FR
+      - EN
+      - DE
