@@ -1,0 +1,18 @@
+documents:
+  # The first document : 
+  - type: CV
+    template: "templates/cv_skeleton.tex"
+    settings:
+      color: "blue"
+    sections:
+      - title: "Professional Experience"
+        file: "templates/sections/experience.tex"
+      - title: "Education"
+        file: "templates/sections/education.tex"
+
+  # Another document : 
+  - type: Letter
+    template: "templates/letter_skeleton.tex"
+    recipient: "Hiring Manager"
+    sections:
+      - file: "templates/sections/letter_body.tex"

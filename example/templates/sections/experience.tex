@@ -1,0 +1,6 @@
+% This loops through your DATA, not the config
+<BLOCK> for job in data.experience </BLOCK>
+    \textbf{<VAR> job.role </VAR>} at \textsc{<VAR> job.company </VAR>} \hfill <VAR> job.year </VAR> \\
+    <VAR> job.details </VAR>
+    \vspace{2mm}
+<BLOCK> endfor </BLOCK>

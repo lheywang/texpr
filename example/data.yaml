@@ -1,0 +1,19 @@
+# data.yaml
+identity:
+  name: "Alex Doe"
+  phone: "+33 6 12 34 56 78"
+  email: "alex@doe.com"
+
+experience:
+  - company: "Google"
+    role: "AI Researcher"
+    year: "2024"
+    details: "Worked on Gemini models."
+  - company: "CERN"
+    role: "Intern"
+    year: "2023"
+    details: "Fixed the LHC with duct tape."
+
+education:
+  - school: "Polytechnique"
+    degree: "MSc Data Science"

@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{<VAR> config.settings.color </VAR>} % Dynamic styling
+
+\begin{document}
+\name{<VAR> data.identity.name </VAR>} % From Data
+\email{<VAR> data.identity.email </VAR>}
+
+% Dynamic Section Loading
+<BLOCK> for section in config.sections </BLOCK>
+    \section{<VAR> section.title </VAR>}
+    % Jinja includes the FILE and passes the DATA context to it automatically
+    <BLOCK> include section.file </BLOCK>
+<BLOCK> endfor </BLOCK>
+
+\end{document}
