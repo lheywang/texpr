@@ -1,25 +1,25 @@
 documents:
-  # The first document : 
-  - type: CV
-    template: "templates/cv_skeleton.tex"
-    settings:
-      color: "blue"
-    sections:
-      - title: "Professional Experience"
-        file: "templates/sections/experience.tex"
-      - title: "Education"
-        file: "templates/sections/education.tex"
-    lang:
-      - FR
-      - EN
-
-  # Another document : 
-  - type: Letter
-    template: "templates/letter_skeleton.tex"
-    recipient: "Hiring Manager"
-    sections:
-      - file: "templates/sections/letter_body.tex"
-    lang:
-      - FR
-      - EN
-      - DE
+- features:
+    has_bibliography: false
+    has_cover: false
+    has_toc: false
+  lang:
+  - FR
+  - EN
+  settings:
+    color: blue
+  template: templates/cv_skeleton.tex
+  type: CV
+- features:
+    has_bibliography: false
+    has_cover: false
+    has_toc: false
+  lang:
+  - FR
+  - EN
+  - DE
+  recipient: Hiring Manager
+  sections:
+  - file: templates/sections/letter_body.tex
+  template: templates/letter_skeleton.tex
+  type: Letter

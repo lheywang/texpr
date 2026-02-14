@@ -18,7 +18,7 @@ from logger import setup_logger
 # Main
 def main() -> None:
     logger = setup_logger(True, "texpr.log")
-    cfg = Config(logger, "../example/config.yaml")
+    cfg = Config(logger, "example/config.yaml")
 
 
 # For debug
